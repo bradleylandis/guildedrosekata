@@ -7,7 +7,7 @@ namespace csharp
     public class BackstagePassStrategyTests
     {
         [Test]
-        public void DecreaseSellIn_ReducesSellInByOne()
+        public void DecreaseSellIn_DecreasesSellInByOne()
         {
             var item = new Item{SellIn = 1};
             var subject = new BackstagePassStrategy(item);

@@ -11,7 +11,7 @@ namespace csharp
         [TestCase("Aged Brie", typeof(IncreaseQualityBeforeAndAfterSellByStrategy))]
         [TestCase("Backstage passes to a TAFKAL80ETC concert", typeof(BackstagePassStrategy))]
         [TestCase("Other", typeof(DecreaseQualityTwiceAsFastAfterSellByStrategy))]
-        public void Create_ReturnsNoQualityUpdate_WhenItemNameIsSulfuras(string itemName, Type expectedType)
+        public void Create_ReturnsProperStrategyForItem(string itemName, Type expectedType)
         {
             var item = new Item {Name = itemName};
             var subject = new QualityUpdateStrategyFactory();

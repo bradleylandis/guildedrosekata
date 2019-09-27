@@ -7,7 +7,7 @@ namespace csharp
     public class DecreaseQualityTwiceAsFastAfterSellByStrategyTests
     {
         [Test]
-        public void DecreaseSellIn_ReducesSellInByOne()
+        public void DecreaseSellIn_DecreasesSellInByOne()
         {
             var item = new Item{SellIn = 1};
             var subject = new DecreaseQualityTwiceAsFastAfterSellByStrategy(item);

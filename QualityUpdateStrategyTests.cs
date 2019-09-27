@@ -9,7 +9,7 @@ namespace csharp
         [TestCase(1)]
         [TestCase(0)]
         [TestCase(-1)]
-        public void UpdateQuality_AlwaysCallsPreSellByUpdate(int sellIn)
+        public void UpdateQuality_AlwaysCallsPerformPreSellByUpdate(int sellIn)
         {
             var item = new Item {SellIn = sellIn};
             var subject = new FakeQualityUpdateStrategy(item);
@@ -19,7 +19,7 @@ namespace csharp
         }
         
         [Test]
-        public void UpdateQuality_PerformsPostSellByUpdateIfSellByIsPast()
+        public void UpdateQuality_CallsPerformPostSellByUpdate_WhenSellByIsPast()
         {
             var item = new Item {SellIn = 0};
             var subject = new FakeQualityUpdateStrategy(item);
@@ -29,7 +29,7 @@ namespace csharp
         }
         
         [Test]
-        public void UpdateQuality_DoesNotPerformPostSellByUpdateIfSellByIsFuture()
+        public void UpdateQuality_DoesNotCallPerformPostSellByUpdate_WhenSellByIsFuture()
         {
             var item = new Item {SellIn = 1};
             var subject = new FakeQualityUpdateStrategy(item);

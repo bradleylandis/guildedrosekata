@@ -17,7 +17,7 @@ namespace csharp
         }
         
         [Test]
-        public void PerformPostSellByUpdate_IncreasesQualityByOne()
+        public void PerformPostSellByUpdate_DecreasesQualityByOne()
         {
             var item = new Item{Quality = 1};
             var subject = new DecreaseQualityTwiceAsFastAfterSellByStrategy(item);
@@ -27,7 +27,7 @@ namespace csharp
         }
         
         [Test]
-        public void PerformPreSellByUpdate_IncreasesQualityByOne()
+        public void PerformPreSellByUpdate_DecreasesQualityByOne()
         {
             var item = new Item{Quality = 1};
             var subject = new DecreaseQualityTwiceAsFastAfterSellByStrategy(item);
